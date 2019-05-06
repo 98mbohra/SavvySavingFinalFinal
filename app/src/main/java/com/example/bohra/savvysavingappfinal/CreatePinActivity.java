@@ -32,7 +32,7 @@ public class CreatePinActivity extends AppCompatActivity
 
         /*
          When the button is clicked, it runs a click listener method which then encrypts the given input
-         *by the user in the text field, and saves it to the pin.txt file.
+         *by the user in the text field, and saves it to the pin.txt file
          */
         confirmButton2.setOnClickListener(new View.OnClickListener()
         {
