@@ -1,5 +1,3 @@
-/*
-*/
 package com.example.bohra.savvysavingappworking;
 
 import android.content.Intent;
@@ -15,8 +13,10 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class CreatePinActivity extends AppCompatActivity
-{
+public class CreatePinActivity extends AppCompatActivity {
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

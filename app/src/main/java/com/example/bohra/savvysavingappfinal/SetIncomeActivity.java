@@ -1,4 +1,4 @@
-package com.example.bohra.savvysavingappworking;
+package com.example.bohra.savvysavingappfinal;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
