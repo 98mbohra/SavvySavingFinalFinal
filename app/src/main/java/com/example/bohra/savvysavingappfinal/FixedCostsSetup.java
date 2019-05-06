@@ -1,4 +1,4 @@
-package com.example.bohra.savvysavingappworking;
+package com.example.bohra.savvysavingappfinal;
 
 import android.content.Intent;
 import android.os.Environment;
@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class FixedCostsSetup extends AppCompatActivity {
 

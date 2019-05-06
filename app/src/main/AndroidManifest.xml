@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.bohra.savvysavingappworking">
+    package="com.example.bohra.savvysavingappfinal">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -12,14 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.bohra.savvysavingappfinal.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".SavingSetup" />
-        <activity android:name=".FixedCostsSetup" />
-        <activity android:name=".CreatePinActivity" />
-        <activity android:name=".SetIncomeActivity" />
-        <activity android:name=".PinEnterActivity">
+        <activity android:name="com.example.bohra.savvysavingappfinal.SavingSetup" />
+        <activity android:name="com.example.bohra.savvysavingappfinal.FixedCostsSetup" />
+        <activity android:name="com.example.bohra.savvysavingappfinal.CreatePinActivity" />
+        <activity android:name="com.example.bohra.savvysavingappfinal.SetIncomeActivity" />
+        <activity android:name="com.example.bohra.savvysavingappfinal.PinEnterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

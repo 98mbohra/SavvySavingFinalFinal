@@ -1,4 +1,4 @@
-package com.example.bohra.savvysavingappworking;
+package com.example.bohra.savvysavingappfinal;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,11 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 
 public class CreatePinActivity extends AppCompatActivity {
 
