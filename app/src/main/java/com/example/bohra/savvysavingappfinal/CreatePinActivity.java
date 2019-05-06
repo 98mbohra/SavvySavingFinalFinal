@@ -1,4 +1,4 @@
-package com.example.bohra.savvysavingappworking;
+package com.example.bohra.savvysavingappfinal;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -12,45 +12,54 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+/**
+ * This class is for the creation of the pin screen where the user sets up the pin to be later used
+ * by the application and by the user so that they can log into the application when closed.
+ */
 
-public class CreatePinActivity extends AppCompatActivity {
-
-
-
+public class CreatePinActivity extends AppCompatActivity
+{
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.createpin);
 
-        //this activity  uses the same pinfile from PinEnter that it writes the content to
+        //Declaration of the confirm button to be displayed on the setup pin screen.
+        final Button confirmButton2 = (Button) findViewById(R.id.ConfirmPinCreatebutton);
+        final EditText enterPinText = (EditText) findViewById(R.id.enterPinText);
+        final IO io = new IO();
 
-        Button confirmButton2 = (Button) findViewById(R.id.ConfirmPinCreatebutton);
-        confirmButton2.setOnClickListener(new View.OnClickListener() {
+        /*
+         When the button is clicked, it runs a click listener method which then encrypts the given input
+         *by the user in the text field, and saves it to the pin.txt file.
+         */
+        confirmButton2.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
+                String pinChecker = enterPinText.getText().toString();
+                if(pinChecker.isEmpty() == false){
 
-
-                EditText enterPinText = (EditText) findViewById(R.id.enterPinText);
-
-
-
-                //int pinSupply = Integer.parseInt(enterPinText.getText().toString());
-                Integer pinToSend = Integer.parseInt(enterPinText.getText().toString());
-
-
-
-                IO io = new IO();
-                if((!enterPinText.getText().toString().equals("")) && (enterPinText.getText().toString().length() == 4))
-                {
-                    pinToSend *= 11;
-                    io.writeFile("pin.txt",pinToSend.toString());
-                    Intent incomeSetIntent = new Intent(getApplicationContext(), SetIncomeActivity.class);
-                    startActivity(incomeSetIntent);
+                    Integer pinToSend = Integer.parseInt(enterPinText.getText().toString());
+                    //Condition handling for checking the pin that was entered in the setup process is valid and of the correct format
+                    if((!enterPinText.getText().toString().equals("")) && (enterPinText.getText().toString().length() == 4))
+                    {
+                        pinToSend *= 11;
+                        io.writeFile("pin.txt",pinToSend.toString());
+                        Intent incomeSetIntent = new Intent(getApplicationContext(), SetIncomeActivity.class);
+                        startActivity(incomeSetIntent);
+                    }
+                    //If the pin is the incorrect format, then it will display an error message asking for a valid pin
+                    else {
+                        Toast notToast = Toast.makeText(getApplicationContext(), "Please enter a valid 4 Digit PIN!", Toast.LENGTH_SHORT);
+                        notToast.show();
+                    }
                 }
-                else
-                {
-                    Toast notToast = Toast.makeText(getApplicationContext(), "Please enter a valid 4 Digit PIN!", Toast.LENGTH_SHORT);
-                    notToast.show();
+                else{
+                    Toast invalidToast = Toast.makeText(getApplicationContext(), "Please enter a valid PIN!", Toast.LENGTH_SHORT);
+                    invalidToast.show();
                 }
             }
         });

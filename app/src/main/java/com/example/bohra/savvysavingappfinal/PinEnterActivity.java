@@ -44,50 +44,36 @@ public class PinEnterActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                TextView countView = (TextView) findViewById(R.id.countView);
-                EditText pinNumber = (EditText) findViewById(R.id.pinEntryFieldText);
+             TextView countView = (TextView) findViewById(R.id.countView);
+             EditText pinNumber = (EditText) findViewById(R.id.pinEntryFieldText);
+             String pinChecker = pinNumber.getText().toString();
+             if(pinChecker.isEmpty() == false) {
+                 int pinNum = Integer.parseInt(pinNumber.getText().toString());
+                 if (checkPinCode(pinNum) == 1) {
 
-                int pinNum = Integer.parseInt(pinNumber.getText().toString());
-
-
-                if (checkPinCode(pinNum) == 1)
-                {
-
-                    //Will send user to the home screen
-                    Intent startHomeScreenIntent = new Intent(getApplicationContext(), MainActivity.class);
-                    startActivity(startHomeScreenIntent);
-                }
-                if((checkPinCode(pinNum) == 0) && (attemptCounter == 1))
-                {
-                    Toast deniedToast = Toast.makeText(getApplicationContext(), "Too many incorrect entries!", Toast.LENGTH_SHORT);
-                    deniedToast.show();
-                    finish();
-                }
-                if(checkPinCode(pinNum) == 0)
-                {
-                    --attemptCounter;
-                    Toast invalidToast = Toast.makeText(getApplicationContext(), "Please enter a valid PIN!", Toast.LENGTH_SHORT);
-                    invalidToast.show();
-                    countView.setText(attemptCounter+  " Attempts Left");
-                    pinNumber.setText("");
-
-                }
-
+                     //Will send user to the home screen
+                     Intent startHomeScreenIntent = new Intent(getApplicationContext(), MainActivity.class);
+                     startActivity(startHomeScreenIntent);
+                 }
+                 if ((checkPinCode(pinNum) == 0) && (attemptCounter == 1)) {
+                     Toast deniedToast = Toast.makeText(getApplicationContext(), "Too many incorrect entries!", Toast.LENGTH_SHORT);
+                     deniedToast.show();
+                     finish();
+                 }
+                 if (checkPinCode(pinNum) == 0) {
+                     --attemptCounter;
+                     Toast invalidToast = Toast.makeText(getApplicationContext(), "Please enter a valid PIN!", Toast.LENGTH_SHORT);
+                     invalidToast.show();
+                     countView.setText(attemptCounter + " Attempts Left");
+                     pinNumber.setText("");
+                 }
+             }
+             else {
+                 Toast invalidToast = Toast.makeText(getApplicationContext(), "Please enter a valid PIN!", Toast.LENGTH_SHORT);
+                 invalidToast.show();
+             }
             }
         });
-
-//        Button setupButton = (Button) findViewById(R.id.SetUpbutton);
-//        setupButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//
-//                //Intent to go to pin setup screen
-//
-//                Intent createPinIntent = new Intent(getApplicationContext(), CreatePinActivity.class);
-//                startActivity(createPinIntent);
-//            }
-//        });
     }
 
     public int checkPinCode(int suppliedPin){

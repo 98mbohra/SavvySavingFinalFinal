@@ -9,6 +9,11 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 
+/**
+ *
+ * This class contains the functionality to handle commonly used IO functions and read some specific data
+ */
+
 public class IO {
 
     public int checkFileExists(String filename)
