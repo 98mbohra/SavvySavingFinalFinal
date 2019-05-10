@@ -1,7 +1,6 @@
-package com.example.bohra.savvysavingappworking;
+package com.example.bohra.savvysavingappfinal;
 
 import android.os.Environment;
-import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -9,6 +8,11 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+
+/**
+ *
+ * This class contains the functionality to handle commonly used IO functions and read some specific data
+ */
 
 public class IO {
 

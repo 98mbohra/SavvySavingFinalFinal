@@ -1,5 +1,9 @@
-package com.example.bohra.savvysavingappworking;
+package com.example.bohra.savvysavingappfinal;
 
+/**
+ * This class describes the period units available. and their inherent day value
+ *
+ */
 public enum Period {
     Day(1),
     Week(7),

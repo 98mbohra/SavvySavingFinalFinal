@@ -1,4 +1,4 @@
-package com.example.bohra.savvysavingappworking;
+package com.example.bohra.savvysavingappfinal;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

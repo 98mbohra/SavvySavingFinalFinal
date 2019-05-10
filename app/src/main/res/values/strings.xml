@@ -10,7 +10,6 @@
         <item>Week</item>
         <item>Fortnight</item>
         <item>Month</item>
-        <item>Day</item>
     </string-array>
 
     <string-array name="categories">
