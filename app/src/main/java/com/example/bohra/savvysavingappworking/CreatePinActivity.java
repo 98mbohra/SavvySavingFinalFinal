@@ -12,11 +12,11 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-
-public class CreatePinActivity extends AppCompatActivity {
-
-
-
+/*
+    This class contains the methods for creating/setting
+ */
+public class CreatePinActivity extends AppCompatActivity
+{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
