@@ -4,6 +4,7 @@ package com.example.bohra.savvysavingappfinal;
  * It is the center class and will navigate to the sprint two components in the menu drawer.
  * It contains the methods to calculate all daily values dynamically along with added purchases
 */
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.design.widget.FloatingActionButton;
@@ -165,7 +166,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings)
         {
-            return true;
+            Intent toSettings = new Intent(getApplicationContext(), SettingsActivity.class);
+            startActivity(toSettings);
         }
         return super.onOptionsItemSelected(item);
     }
@@ -177,13 +179,26 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera)
+        if (id == R.id.nav_finance)
         {
-            // Handle the camera action
+            Intent startFinanceActivity = new Intent(getApplicationContext(), FinanceStat.class);
+            startActivity(startFinanceActivity);
         }
-        else if (id == R.id.nav_gallery) {}
-        else if (id == R.id.nav_slideshow) {}
-        else if (id == R.id.nav_manage) {}
+        else if (id == R.id.nav_saving)
+        {
+            Intent startSavingActivity = new Intent(getApplicationContext(), SavingStat.class);
+            startActivity(startSavingActivity);
+        }
+        else if (id == R.id.nav_scheduled_payments)
+        {
+            Intent startPaymentSchedule = new Intent(getApplicationContext(), PaymentSchedule.class);
+            startActivity(startPaymentSchedule);
+        }
+        else if (id == R.id.nav_purchase)
+        {
+            Intent startPurchaseLog = new Intent(getApplicationContext(), Purchases.class);
+            startActivity(startPurchaseLog);
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

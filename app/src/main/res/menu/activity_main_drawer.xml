@@ -5,19 +5,19 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_saving"
 
             android:title="Savings" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_finance"
 
-            android:title="Finance Stats" />
+            android:title="Settings" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_purchase"
 
             android:title="Purchase Log" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/nav_scheduled_payments"
 
             android:title="Scheduled Payments" />
     </group>

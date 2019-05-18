@@ -8,6 +8,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.bohra.savvysavingappfinal.IO;
+import com.example.bohra.savvysavingappfinal.R;
+import com.example.bohra.savvysavingappfinal.SetIncomeActivity;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;

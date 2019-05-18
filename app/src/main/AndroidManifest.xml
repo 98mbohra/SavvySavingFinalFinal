@@ -2,8 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.bohra.savvysavingappfinal">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,14 +13,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.example.bohra.savvysavingappfinal.MainActivity"
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"></activity>
+        <activity android:name=".FinanceStat" />
+        <activity android:name=".SavingStat" />
+        <activity android:name=".PaymentSchedule" />
+        <activity android:name=".Purchases" />
+        <activity
+            android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name="com.example.bohra.savvysavingappfinal.SavingSetup" />
-        <activity android:name="com.example.bohra.savvysavingappfinal.FixedCostsSetup" />
-        <activity android:name="com.example.bohra.savvysavingappfinal.CreatePinActivity" />
-        <activity android:name="com.example.bohra.savvysavingappfinal.SetIncomeActivity" />
-        <activity android:name="com.example.bohra.savvysavingappfinal.PinEnterActivity">
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SavingSetup" />
+        <activity android:name=".FixedCostsSetup" />
+        <activity android:name=".CreatePinActivity" />
+        <activity android:name=".SetIncomeActivity" />
+        <activity android:name=".PinEnterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
