@@ -51,6 +51,16 @@
 
     <!-- Strings related to Settings -->
 
+    <string name="settings">Settings: </string>
+    <string name="pref_settings_savings">Change savings goal</string>
+    <string name="pref_settings_changeIncome">Change your income</string>
+    <string name="changeSettings">Change Values</string>
+    <string name="income_period">Income Period</string>
+    <string name="pledge_goal">Pledge Goal</string>
+
+    <string name = "pref_settings_savings_default_value">SavingSetup PUT HERE</string>
+
+
     <!-- Example General settings -->
     <string name="pref_header_general">General</string>
 
