@@ -6,4 +6,39 @@
     android:layout_height="match_parent"
     tools:context="com.example.bohra.savvysavingappfinal.PaymentSchedule">
 
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/pushnotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set push notification"
+        tools:layout_editor_absoluteX="93dp"
+        tools:layout_editor_absoluteY="513dp" />
+
+    <EditText
+        android:id="@+id/enterMonth"
+        android:layout_width="199dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Month e.g. 0 (January)"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="93dp"
+        tools:layout_editor_absoluteY="367dp" />
+
+    <EditText
+        android:id="@+id/enterDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Day of Month"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="86dp"
+        tools:layout_editor_absoluteY="426dp" />
+
 </android.support.constraint.ConstraintLayout>
