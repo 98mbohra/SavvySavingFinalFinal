@@ -5,6 +5,7 @@ package com.example.bohra.savvysavingappfinal;
  * to their saving goal by the app at a later date.
  */
 import android.content.Intent;
+import android.support.annotation.StringDef;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -32,6 +33,7 @@ public class SavingSetup extends AppCompatActivity
         final EditText goalAmount = (EditText) findViewById(R.id.savingAmountEditText);
         final EditText pledgeAmount = (EditText) findViewById(R.id.pledgeAmountEditText);
 
+
         Button goHomeBtn = (Button) findViewById(R.id.continueDateButton);
 
         /*
@@ -56,6 +58,8 @@ public class SavingSetup extends AppCompatActivity
                 else
                     {
                     int goalAmountToSend = Integer.parseInt(goalAmount.getText().toString());
+
+
                     int pledgeAmountToSend = Integer.parseInt(pledgeAmount.getText().toString());
 
                     if ((goalAmountToSend < 0) || (pledgeAmountToSend < 0))

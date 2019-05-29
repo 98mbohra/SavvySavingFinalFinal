@@ -19,6 +19,8 @@
         <activity android:name=".SavingStat" />
         <activity android:name=".PaymentSchedule" />
         <activity android:name=".Purchases" />
+        <activity android:name=".Settings"/>
+
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"

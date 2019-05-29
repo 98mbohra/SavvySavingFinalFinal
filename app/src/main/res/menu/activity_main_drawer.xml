@@ -20,6 +20,12 @@
             android:id="@+id/nav_scheduled_payments"
 
             android:title="Scheduled Payments" />
+
+        <item
+            android:id="@+id/nav_setting"
+
+            android:title="Settings" />
+
     </group>
 
 </menu>

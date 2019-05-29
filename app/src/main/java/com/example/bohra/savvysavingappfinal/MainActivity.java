@@ -199,6 +199,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent startPurchaseLog = new Intent(getApplicationContext(), Purchases.class);
             startActivity(startPurchaseLog);
         }
+        else if (id == R.id.nav_setting)
+        {
+            Intent startSavingsActivity = new Intent(getApplicationContext(), Settings.class);
+            startActivity(startSavingsActivity);
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
