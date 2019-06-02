@@ -201,7 +201,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         else if (id == R.id.nav_setting)
         {
-            Intent startSavingsActivity = new Intent(getApplicationContext(), Settings.class);
+            Intent startSavingsActivity = new Intent(getApplicationContext(), SettingsAct.class);
             startActivity(startSavingsActivity);
         }
 

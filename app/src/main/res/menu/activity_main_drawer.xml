@@ -11,7 +11,7 @@
         <item
             android:id="@+id/nav_finance"
 
-            android:title="Settings" />
+            android:title="Finance" />
         <item
             android:id="@+id/nav_purchase"
 

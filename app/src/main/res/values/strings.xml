@@ -56,9 +56,9 @@
     <string name="pref_settings_changeIncome">Change your income</string>
     <string name="changeSettings">Change Values</string>
     <string name="income_period">Income Period</string>
-    <string name="pledge_goal">Pledge Goal</string>
+    <string name="pledge_deduction">Pledge Deduction</string>-->
 
-    <string name = "pref_settings_savings_default_value">SavingSetup PUT HERE</string>
+    <string name="pref_settings_savings_default_value">SavingSetup PUT HERE</string>
 
 
     <!-- Example General settings -->
