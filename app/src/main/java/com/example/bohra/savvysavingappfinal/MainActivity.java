@@ -66,10 +66,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         dailyBreakdown.setSecondaryProgress(Math.round(totalProgress2+savingPledge));
 
         //The background will represent the remaining amount and should be calculated
-        incomeText.setText("Income: "+income);
+        incomeText.setText("$" +roundOffTo2DecPlaces(income));
+
+
+
         savingPledgeText.setText("Pledge:" +savingPledge);
         totalOfCosts.setText("Total costs" +totalDailyFixed);
-        budgetView.setText("Budget: " +(income - (totalDailyFixed + savingPledge)));
+        budgetView.setText("$ " +roundOffTo2DecPlaces((income - (totalDailyFixed + savingPledge))));
 
         setSupportActionBar(toolbar);
 
@@ -370,5 +373,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
             totalDailyFixed += fixedTemp;
         }
+    }
+
+    String roundOffTo2DecPlaces(float val)
+    {
+        return String.format("%.2f", val);
     }
 }
