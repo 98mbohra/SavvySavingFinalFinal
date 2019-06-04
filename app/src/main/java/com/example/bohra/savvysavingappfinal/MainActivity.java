@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         final TextView incomeText = (TextView) findViewById(R.id.incomeView);
-        final TextView savingPledgeText = (TextView) findViewById(R.id.savingPledgeView);
         final TextView totalOfCosts = (TextView) findViewById(R.id.t_costsView);
         final TextView budgetView = (TextView) findViewById(R.id.dispoBudget);
 
@@ -62,17 +61,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //Assigning values to spending bar
         dailyBreakdown.setMax(Math.round(income));
         float totalProgress2 = totalDailyFixed + totalDailyPurchase;
-        dailyBreakdown.setProgress(Math.round(totalProgress2));
-        dailyBreakdown.setSecondaryProgress(Math.round(totalProgress2+savingPledge));
+        //dailyBreakdown.setProgress(Math.round(totalProgress2));
+        dailyBreakdown.setProgress(Math.round(totalProgress2+savingPledge));
 
         //The background will represent the remaining amount and should be calculated
         incomeText.setText("$" +roundOffTo2DecPlaces(income));
 
+        totalOfCosts.setText("$ " +roundOffTo2DecPlaces(totalDailyFixed+savingPledge));
 
-
-        savingPledgeText.setText("Pledge:" +savingPledge);
-        totalOfCosts.setText("Total costs" +totalDailyFixed);
-        budgetView.setText("$ " +roundOffTo2DecPlaces((income - (totalDailyFixed + savingPledge))));
+        budgetView.setText("$ " +roundOffTo2DecPlaces((income - (totalDailyFixed + savingPledge)))+ " Available");
 
         setSupportActionBar(toolbar);
 
@@ -106,11 +103,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     calculateProgressAmount();
                     dailyBreakdown.setMax(Math.round(income));
                     float totalProgress2 = totalDailyFixed + totalDailyPurchase;
-                    dailyBreakdown.setProgress(Math.round(totalProgress2));
+                    //dailyBreakdown.setProgress(Math.round(totalProgress2));
 
-                    dailyBreakdown.setSecondaryProgress(Math.round(totalProgress2 + savingPledge));
+                    dailyBreakdown.setProgress(Math.round(totalProgress2 + savingPledge));
                     totalOfCosts.setText("Total costs" + totalProgress2);
                     budgetView.setText("Budget: " + (income - ((totalDailyFixed + savingPledge) + totalDailyPurchase)));
+
+                    totalOfCosts.setText("$ " +roundOffTo2DecPlaces((totalDailyFixed+savingPledge)));
+                    budgetView.setText("$ " +roundOffTo2DecPlaces((income - (totalDailyFixed + savingPledge +totalDailyPurchase)))+ " Available");
 
                     Snackbar.make(view, "Purchase Added" + totalDailyPurchase, Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
