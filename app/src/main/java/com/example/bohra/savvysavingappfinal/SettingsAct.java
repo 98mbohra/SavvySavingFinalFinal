@@ -10,6 +10,11 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+/**
+ *
+ * This activity allows the user to change their values specified during the initial sequence
+ */
+
 public class SettingsAct extends AppCompatActivity {
 
     android.icu.util.Calendar currentTime = android.icu.util.Calendar.getInstance();

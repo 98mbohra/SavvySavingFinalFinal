@@ -14,6 +14,13 @@ import android.widget.Toast;
 import android.app.Notification;
 import android.app.NotificationManager;
 
+/**
+ *
+ * This activity allows the user to set a notification to be reminded to make a payment.
+ *
+ *
+ */
+
 public class PaymentSchedule extends AppCompatActivity {
 
     @Override

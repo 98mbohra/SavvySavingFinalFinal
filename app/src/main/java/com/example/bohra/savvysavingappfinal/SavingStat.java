@@ -6,6 +6,11 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+/**
+ *
+ * This app displays the state of the saving account of the user. It reads data from the file,
+ * Converts it to the correct format and values. Presents it in the gui.
+ */
 public class SavingStat extends AppCompatActivity {
 
     private String savingPeriod = "";

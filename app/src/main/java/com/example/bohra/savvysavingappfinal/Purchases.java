@@ -6,6 +6,12 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+/**
+ *
+ * This activity allows the user to see a list of 30 of their last purchases.
+ * It uses and array and file IO printed to the GUI.
+ */
+
 public class Purchases extends AppCompatActivity {
 
 
